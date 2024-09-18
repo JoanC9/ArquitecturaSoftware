@@ -6,26 +6,58 @@
     <title>Encontrar</title>
 
     <style>
-
-        li { 
-            
-            background-color: aquamarine;
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
         }
 
+        /* Estilos para los títulos */
+        h2 {
+            text-align: center;
+            color: #337ab7;
+            margin-top: 20px;
+        }
+
+        /* Estilos para la lista de artículos */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        li:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Estilos para el contenedor de la lista */
+        .contenedor-lista {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
     </style>
 
 </head>
 <body>
     <h2>Los articulos encontradas con el nombre de {{introducido}} fueron {{encontrado|length}}</h2>
 
-    <ul>
-
-        {% for i in encontrado %}
-
-            <li>{{i}}</li>
-
-        {% endfor %}
-
-    </ul>
+    <div class="contenedor-lista">
+        <ul>
+            {% for i in encontrado %}
+                <li>{{i}}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>

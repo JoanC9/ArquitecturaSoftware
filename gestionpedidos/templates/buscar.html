@@ -6,13 +6,61 @@
     <title>Buscar</title>
 
     <style>
-
-        h1 { 
-
-            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-            font-weight:  900;
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
         }
 
+        /* Estilos para los títulos */
+        h1 {
+            text-align: center;
+            color: #337ab7;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #337ab7;
+            margin-top: 20px;
+        }
+
+        h4 {
+            color: #666;
+        }
+
+        /* Estilos para el formulario */
+        form {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        /* Estilos para los campos del formulario */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #337ab7;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #23527c;
+        }
     </style>
 
 </head>
@@ -26,7 +74,7 @@
 
     <form action="/encontrar/" method="get">
 
-        <input type="text" name="art">
+        <input type="text" name="art" placeholder="Nombre del artículo">
 
         <input type="submit" value="Buscar">
 
